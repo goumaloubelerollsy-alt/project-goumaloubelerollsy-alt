@@ -1,4 +1,4 @@
-# 💡 Lampe Intelligente à Détection de Mouvement et de Lumière
+<img width="165" height="150" alt="schema kicad" src="https://github.com/user-attachments/assets/c3db3d41-2836-4fae-8048-15bc634e74b1" /># 💡 Lampe Intelligente à Détection de Mouvement et de Lumière
 
 **Auteur :** Gouma Loubele Rollsy  
 **Groupe :** 1221FA  
@@ -60,7 +60,10 @@ Ce projet propose une solution **économique, simple et autonome** :
 ### Schéma électrique (KiCad)
 
 <!-- TODO: Insérer ici le schéma électrique KiCad -->
-<!-- Exemple : ![Schéma KiCad](./docs/schema_kicad.png) -->
+<!-- Exemple : ![Schéma KiCad](./docs/schema_kicad.png) --!<img width="680" height="620" alt="schema_kicad" src="https://github.com/user-attachments/assets/893dfb36-6cf6-4410-8863-9182f1bbf9fa" />
+
+
+
 
 ### Logique de décision
 
