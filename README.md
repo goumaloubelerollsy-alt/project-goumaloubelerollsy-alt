@@ -1,62 +1,66 @@
-# Your Project Name
+# 💡 Lampe Intelligente à Détection de Mouvement et de Lumière
 
-| | |
-|-|-|
-|`Author` | Your full name
+**Auteur :** Gouma Loubele Rollsy  
+**Groupe :** 1221FA  
+**Plateforme :** Arduino Uno  
+**Langage :** C/C++  
+**Université :** Politehnica Bucarest — FILS — AM (Français)
+
+---
 
 ## Description
 
+Ce projet implémente une lampe intelligente autonome basée sur un microcontrôleur
+**Arduino Uno**. Le système combine deux capteurs environnementaux pour décider
+automatiquement d'allumer ou d'éteindre une LED :
+
+- Un **capteur PIR (HC-SR501)** pour détecter la présence humaine via le
+  rayonnement infrarouge passif.
+- Une **photorésistance (LDR)** pour mesurer le niveau de luminosité ambiante
+  via le convertisseur ADC 10 bits de l'Arduino (broche A0).
+
+La lampe ne s'allume que lorsque **les deux conditions sont simultanément vraies** :
+un mouvement est détecté **ET** la luminosité ambiante est insuffisante.
+Un délai de temporisation (~30 secondes) maintient la lampe allumée après la
+disparition du mouvement pour éviter les coupures brusques.
+
+---
+
 ## Motivation
+
+L'éclairage artificiel représente une part importante de la consommation électrique
+résidentielle. Une grande partie de cette énergie est gaspillée lorsque les lumières
+restent allumées dans des pièces vides ou en présence d'une luminosité naturelle
+suffisante.
+
+Ce projet propose une solution **économique, simple et autonome** :
+
+- ⚡ **Économie d'énergie** : la lampe reste éteinte si la lumière du jour suffit,
+  même en cas de présence détectée.
+- 🤖 **Automatisation complète** : aucune intervention manuelle requise.
+- 🔧 **Implémentation bas niveau** : protocoles gérés manuellement en C/C++,
+  sans bibliothèques de haut niveau, conformément aux exigences du cours.
+- 🔌 **Extensibilité** : le système peut être enrichi (module Wi-Fi, relais pour
+  vraie ampoule, horloge RTC, interface web).
+
+---
 
 ## Architecture
 
-### Block diagram
+### Schéma fonctionnel
 
-<!-- Make sure the path to the picture is correct -->
-![Block Diagram](schematics/block_diagram.png)
+<!-- TODO: Insérer ici le schéma bloc du système (ex: image KiCad ou TinkerCad) -->
+<!-- Exemple : ![Schéma fonctionnel](./docs/schema_fonctionnel.png) -->
 
-### Schematic
+### Schéma de câblage (Breadboard)
 
-![Schematic](schematics/kicad_schematic.png)
+<!-- TODO: Insérer ici le schéma de câblage complet -->
+<!-- Exemple : ![Schéma câblage](./docs/schema_cablage.png) -->
 
-### Components
+### Schéma électrique (KiCad)
 
+<!-- TODO: Insérer ici le schéma électrique KiCad -->
+<!-- Exemple : ![Schéma KiCad](./docs/schema_kicad.png) -->
 
-<!-- This is just an example, fill in with your actual components -->
+### Logique de décision
 
-| Device | Usage | Price |
-|--------|--------|-------|
-| Activ Buzzer | Buzzer | [1.5 RON](https://www.optimusdigital.ro/ro/audio-buzzere/635-buzzer-activ-de-3-v.html?search_query=buzzer&results=61) |
-| Push Button | Button | [1 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&results=222) |
-| Jumper Wires | Connecting components | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=set+fire&results=110) |
-| Breadboard | Project board | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard&results=145) |
-
-### Libraries
-
-<!-- This is just an example, fill in the table with your actual components -->
-
-| Library | Description | Usage |
-|---------|-------------|-------|
-| [lib-name1](link-to-lib) | official description of the lib | Used for accesing the peripherals of the microcontroller  |
-| [lib-name2](link-to-lib) | official description of the lib | Used for accesing the peripherals of the microcontroller  |
-
-## Log
-
-<!-- write every week your progress here -->
-
-### Week 6 - 12 May
-
-### Week 7 - 19 May
-
-### Week 20 - 26 May
-
-
-## Reference links
-
-<!-- Fill in with appropriate links and link titles -->
-
-[Tutorial 1](https://www.youtube.com/watch?v=wdgULBpRoXk&t=1s&ab_channel=BenEater)
-
-[Article 1](https://www.explainthatstuff.com/induction-motors.html)
-
-[Link title](https://projecthub.arduino.cc/)
