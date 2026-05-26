@@ -64,3 +64,36 @@ Ce projet propose une solution **économique, simple et autonome** :
 
 ### Logique de décision
 
+const int pinPIR = 2;
+const int pinLDR = A0;
+const int pinLampe = 13;
+const int seuilObscurite = 400;
+
+void setup() {
+  pinMode(pinPIR, INPUT);
+  pinMode(pinLampe, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // 1. Lecture PIR
+  int etatPIR = digitalRead(pinPIR);
+
+  // 2. Lecture LDR
+  int valeurLDR = analogRead(pinLDR);
+
+  // 3. Affichage moniteur série
+  Serial.print("Mouvement (PIR): ");
+  Serial.print(etatPIR);
+  Serial.print(" | Luminosite (LDR): ");
+  Serial.println(valeurLDR);
+
+  // 4. Logique conditionnelle
+  if (etatPIR == HIGH && valeurLDR < seuilObscurite) {
+    digitalWrite(pinLampe, HIGH); // Allumer
+  } else {
+    digitalWrite(pinLampe, LOW);  // Éteindre
+  }
+
+  delay(200);
+}
